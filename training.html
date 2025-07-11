@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personalized Training | Coach Jay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      padding: 2rem;
+      margin: 0;
+    }
+    nav {
+      background: #2f3a2f;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #f39c12;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      color: #f39c12;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #2f3a2f;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #f39c12;
+      background: transparent;
+      color: white;
+      box-sizing: border-box;
+    }
+    button {
+      background: #f39c12;
+      color: #1c1c1c;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Training</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
+  </nav>
+
+  <h1>Personalized Training Questionnaire</h1>
+  <form action="https://formspree.io/f/xgvygneg" method="POST">
+    <input type="hidden" name="_next" value="membership.html" />
+    
+    <label>Full Name: <input type="text" name="name" required></label>
+    <label>Age: <input type="number" name="age" min="10" required></label>
+    
+    <label>Current Fitness Level:
+      <select name="fitness_level" required>
+        <option value="">--Select--</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </label>
+    
+    <label>Preferred Training Style:
+      <select name="training_style" required>
+        <option value="">--Select--</option>
+        <option>Strength Training</option>
+        <option>Cardio</option>
+        <option>HIIT</option>
+        <option>Flexibility</option>
+        <option>Mixed</option>
+      </select>
+    </label>
+    
+    <label>Fitness Goals: <textarea name="fitness_goals" rows="3" placeholder="e.g., muscle gain, weight loss"></textarea></label>
+    
+    <label>Days per week available to train: <input type="number" name="days_per_week" min="1" max="7"></label>
+    
+    <label>Do you want 1-on-1 attention? 
+      <select name="one_on_one_attention" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Would you like progress tracking? 
+      <select name="progress_tracking" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Do you have access to equipment or a gym? <textarea name="equipment_access" rows="2" placeholder="e.g., dumbbells, gym machine"></textarea></label>
+    
+    <label>Do you have any injuries? <textarea name="injuries" rows="2" placeholder="If yes, please specify"></textarea></label>
+    
+    <label>Preferred workout time: <input type="text" name="preferred_workout_time" placeholder="e.g., mornings, evenings"></label>
+    
+    <label>What motivates you to train? <textarea name="motivation" rows="2"></textarea></label>
+    
+    <label>Any exercises you dislike or avoid? <textarea name="disliked_exercises" rows="2"></textarea></label>
+    
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

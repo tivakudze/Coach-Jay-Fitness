@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nutritional Guidance | Coach Jay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: white;
+      padding: 2rem;
+      margin: 0;
+    }
+    nav {
+      background: #2f3a2f;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #f39c12;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      color: #f39c12;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #2f3a2f;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #f39c12;
+      background: transparent;
+      color: white;
+      box-sizing: border-box;
+    }
+    button {
+      background: #f39c12;
+      color: #1c1c1c;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="training.html">Training</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="membership.html">Membership</a>
+  </nav>
+
+  <h1>Nutritional Guidance Questionnaire</h1>
+  <form action="https://formspree.io/f/xgvygneg" method="POST">
+    <input type="hidden" name="_next" value="membership.html" />
+    
+    <label>Full Name: <input type="text" name="name" required></label>
+    <label>Age: <input type="number" name="age" min="10" required></label>
+    
+    <label>Current Diet Description: <textarea name="current_diet" rows="3" placeholder="Describe your current diet"></textarea></label>
+    
+    <label>Food Allergies: <input type="text" name="allergies" placeholder="e.g., dairy, nuts"></label>
+    
+    <label>Supplements You Use: <input type="text" name="supplements" placeholder="e.g., protein powder, vitamins"></label>
+    
+    <label>Meal Preferences:
+      <select name="meal_preferences" required>
+        <option value="">--Select--</option>
+        <option>Balanced</option>
+        <option>Vegetarian</option>
+        <option>High Protein</option>
+        <option>Low Carb</option>
+      </select>
+    </label>
+    
+    <label>Personalized Meal Plans? 
+      <select name="personalized_meal_plans" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Supplements Advice? 
+      <select name="supplements_advice" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Pre/Post Workout Nutrition? 
+      <select name="pre_post_workout_nutrition" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Nutrient Timing? 
+      <select name="nutrient_timing" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Meals per Day: <input type="number" name="meals_per_day" min="1" max="10"></label>
+    
+    <label>Snacking Between Meals? 
+      <select name="snacking" required>
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </label>
+    
+    <label>Favorite Meal of the Day: <input type="text" name="favorite_meal" placeholder="e.g., breakfast"></label>
+    
+    <label>Water Intake (liters/day): <input type="number" step="0.1" name="water_intake"></label>
+    
+    <label>Cook at Home or Eat Out? 
+      <select name="cooking_preference" required>
+        <option value="">--Select--</option>
+        <option>Cook at home</option>
+        <option>Eat out</option>
+      </select>
+    </label>
+    
+    <label>Diet Plans Followed Before: <textarea name="previous_diet_plans" rows="2"></textarea></label>
+    
+    <label>Nutrition Goal: <input type="text" name="nutrition_goal" placeholder="e.g., weight loss, muscle gain"></label>
+    
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
